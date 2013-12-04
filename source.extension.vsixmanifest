@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="Runsettings..e82ac86a-72fc-486f-9840-960bae8f3ec7" Version="2.0" Language="en-US" Publisher="Terje Sandstrom" />
+    <DisplayName>Runsettings</DisplayName>
+    <Description xml:space="preserve">Runsettings default template.  A solution Item template.  Right click the solution, choose Add/New Item and choose Runsettings under General, and the default runsettings file is added as a solution item, and opened as XML in your editor.  See http://msdn.microsoft.com/en-us/library/vstudio/jj159530.aspx for information on how to customize the runsettings. </Description>
+    <MoreInfo>http://msdn.microsoft.com/en-us/library/vstudio/jj159530.aspx</MoreInfo>
+    <License>License.txt</License>
+    <ReleaseNotes>ReleaseNotes.txt</ReleaseNotes>
+    <Icon>STAR10.GIF</Icon>
+    <PreviewImage>11-06-2013 10-42-19.png</PreviewImage>
+    <Tags>test runsettings codecoverage</Tags>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[11.0,12.0]" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="4.5" />
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="File" Path="ItemTemplates" d:TargetPath="ItemTemplates\Runsettings.zip" />
+  </Assets>
+</PackageManifest>

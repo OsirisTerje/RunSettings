@@ -1,4 +1,6 @@
-﻿2.0:  
+﻿Note:  VS2012 and VS2013 have seperate downloads, see links on each one.
+
+2.0:  
 	Added support for VS 2013.  
 	Removed testadapters and test code from the coverage results.
 1.0:  Intial release.  For VS 2012

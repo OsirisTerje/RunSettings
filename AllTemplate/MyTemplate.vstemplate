@@ -1,8 +1,8 @@
 <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
   <TemplateData>
     <DefaultName>Runsettings.runsettings</DefaultName>
-    <Name>Runsettings</Name>
-    <Description>Default runsettings file.</Description>
+    <Name>CompleteRunsettings</Name>
+    <Description>Default runsettings file with all elements.</Description>
     <ProjectType>General</ProjectType>
     <SortOrder>10</SortOrder>
     <Icon>star10.ico</Icon>

@@ -13,6 +13,7 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -25,7 +26,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -73,14 +73,16 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="ItemTemplates\Runsettings.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
+    <Content Include="AllTemplate\MyTemplate.vstemplate" />
+    <Content Include="AllTemplate\__TemplateIcon.ico" />
+    <Content Include="CoverageNoParallelTemplate\CoverageNoParallel.vstemplate" />
+    <Content Include="CoverageNoParallelTemplate\__TemplateIcon.ico" />
     <Content Include="License.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="ParallelTemplate\MyTemplate.vstemplate" />
+    <Content Include="ParallelTemplate\__TemplateIcon.ico" />
     <Content Include="ReleaseNotes.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
@@ -89,6 +91,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <None Include="AllTemplate\AllRunSettings.runsettings" />
+    <None Include="AllTemplate\AllRunSettings.zip" />
+    <None Include="CoverageNoParallelTemplate\CoverageNoParallel.runsettings" />
+    <None Include="CoverageNoParallelTemplate\coveragenoparallel.zip" />
+    <None Include="ParallelTemplate\parallel.runsettings" />
+    <None Include="ParallelTemplate\parallel.zip" />
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
       <OutputSubPath>Test Settings</OutputSubPath>

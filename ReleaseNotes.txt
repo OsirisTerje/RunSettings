@@ -1,9 +1,15 @@
 ﻿Note:  VS2012, VS2013 and VS2015 have seperate downloads, see links on each one.
+3.1:  
+    Added support for VS 2015 Update 1 with parallel testing
+    Added 3 item templates for All, Parallel only and Code coverage only
+
 3.0:
     Added support for VS 2015
     Added section for Runconfiguration
     Added section for TestRunParameters
+
 2.0:  
     Added support for VS 2013.  
     Removed testadapters and test code from the coverage results.
+
 1.0:  Intial release.  For VS 2012

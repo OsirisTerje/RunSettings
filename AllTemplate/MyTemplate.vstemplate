@@ -1,15 +1,15 @@
 <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
   <TemplateData>
-    <DefaultName>Runsettings.runsettings</DefaultName>
+    <DefaultName>CompleteRunsettings.runsettings</DefaultName>
     <Name>CompleteRunsettings</Name>
-    <Description>Default runsettings file with all elements.</Description>
+    <Description>Default runsettings file with all elements, and parallel enabled.</Description>
     <ProjectType>General</ProjectType>
     <SortOrder>10</SortOrder>
     <Icon>star10.ico</Icon>
   </TemplateData>
   <TemplateContent>
     <References />
-    <ProjectItem TargetFileName="$fileinputname$.runsettings" ReplaceParameters="false">default.runsettings</ProjectItem>
+    <ProjectItem TargetFileName="$fileinputname$.runsettings" ReplaceParameters="false">AllRunSettings.runsettings</ProjectItem>
     
   </TemplateContent>
 </VSTemplate>

@@ -95,6 +95,18 @@
     <None Include="AllTemplate\AllRunSettings.zip" />
     <None Include="CoverageNoParallelTemplate\CoverageNoParallel.runsettings" />
     <None Include="CoverageNoParallelTemplate\coveragenoparallel.zip" />
+    <Content Include="ItemTemplates\AllRunSettings.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ItemTemplates\coveragenoparallel.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ItemTemplates\parallel.zip">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <None Include="ParallelTemplate\parallel.runsettings" />
     <None Include="ParallelTemplate\parallel.zip" />
     <None Include="source.extension.vsixmanifest">

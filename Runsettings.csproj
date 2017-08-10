@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
     <SccProjectName>SAK</SccProjectName>
@@ -74,14 +74,19 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="AllTemplate\MyTemplate.vstemplate" />
+    <Content Include="AllTemplate\STAR10.ico" />
     <Content Include="AllTemplate\__TemplateIcon.ico" />
-    <Content Include="CoverageNoParallelTemplate\CoverageNoParallel.vstemplate" />
+    <Content Include="CoverageNoParallelTemplate\CoverageNoParallel.vstemplate">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="CoverageNoParallelTemplate\STAR10.ico" />
     <Content Include="CoverageNoParallelTemplate\__TemplateIcon.ico" />
     <Content Include="License.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="ParallelTemplate\MyTemplate.vstemplate" />
+    <Content Include="ParallelTemplate\STAR10.ico" />
     <Content Include="ParallelTemplate\__TemplateIcon.ico" />
     <Content Include="ReleaseNotes.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

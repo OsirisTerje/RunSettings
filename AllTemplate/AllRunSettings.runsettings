@@ -169,6 +169,9 @@ Included items must then not match any entries in the exclude list to remain inc
         <UseVsKeepEngineRunning>false</UseVsKeepEngineRunning>
         <ShadowCopyFiles>false</ShadowCopyFiles>
         <DefaultTestNamePattern>{m}{a}</DefaultTestNamePattern>
+        <DomainUsage>Single</DomainUsage>
+        <DumpXmlTestDiscovery>false</DumpXmlTestDiscovery>
+        <DumpXmlTestResults>false</DumpXmlTestResults>
     </NUnit>
     -->
 </RunSettings>

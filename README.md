@@ -1,4 +1,4 @@
-# RunSettings
+### RunSettings
 Item templates for runsettings files
 
 A set of Runsettings solution templates for VS2017 and upwards.   
@@ -8,4 +8,19 @@ Right click the solution, choose Add/New Item and choose one of the Runsettings 
 
 See http://msdn.microsoft.com/en-us/library/vstudio/jj159530.aspx and https://msdn.microsoft.com/en-gb/library/jj635153.aspx  for information on how to customize the runsettings. 
 
+### Details
+A solution item template that creates a set of default runsettings files under Solution Items, and saves you from having to do this manually.  See [http://msdn.microsoft.com/en-us/library/vstudio/jj159530.aspx](http://msdn.microsoft.com/en-us/library/vstudio/jj159530.aspx) for information on how to change the default settings. 
 
+The runsettings file is used to change the code coverage analysis settings for a test run, in particular which files to be included and excluded from analysis,  and also used to set symbol search paths.  It can also set Runconfigurations and testrunparameters, and specific settings for NUnit and MSTest. 
+
+It can also enable [parallel run of unit tests](https://blogs.msdn.microsoft.com/visualstudioalm/2016/02/08/parallel-and-context-sensitive-test-execution-with-visual-studio-2015-update-1/).
+
+There are 3 templates included, one complete which includes code coverage and parallel run, one with only code coverage, and one with only parallel run.
+
+See this blogpost for more information :[How to exclude code from code coverage in Visual Studio](http://hermit.no/how-to-exclude-code-from-code-coverage-in-visual-studio-unit-testing-using-runsettings/) 
+
+[VS 2015 version ](https://marketplace.visualstudio.com/items?itemName=OsirisTerje.Runsettings)
+
+[VS 2013 version ](/vsgallery/704ebd18-7d60-4341-9224-532f73229c74)
+
+[VS 2012 version ](/vsgallery/601bd207-5889-4935-b101-3ebe1f25aafa)

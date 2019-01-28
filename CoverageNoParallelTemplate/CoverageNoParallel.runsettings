@@ -61,6 +61,7 @@ Included items must then not match any entries in the exclude list to remain inc
               <Exclude>
                 <ModulePath>.*CPPUnitTestFramework.*</ModulePath>
                 <ModulePath>.*TestAdapter.*</ModulePath>
+                <ModulePath>.*nunit.*</ModulePath>
               </Exclude>
             </ModulePaths>
 

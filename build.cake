@@ -205,7 +205,7 @@ Task("BuildAllTemplate")
 Task("CoverageNoParallelTemplate")
 	.Does(() => 
 	{
-		CopyToArchive("CoverageNoParallelTemplate/","CoverageNoParallel.runsettings","CoverageNoParallelTemplate.zip");
+		CopyToArchive("CoverageNoParallelTemplate/","CoverageNoParallel.runsettings","coveragenoparallel.zip");
 	});
 
 Task("ParallelTemplate")

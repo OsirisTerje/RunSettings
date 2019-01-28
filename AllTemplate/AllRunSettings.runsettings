@@ -172,6 +172,7 @@ Included items must then not match any entries in the exclude list to remain inc
         <DomainUsage>Single</DomainUsage>
         <DumpXmlTestDiscovery>false</DumpXmlTestDiscovery>
         <DumpXmlTestResults>false</DumpXmlTestResults>
+        <ShowInternalProperties>false</ShowInternalProperties>
     </NUnit>
     -->
 </RunSettings>

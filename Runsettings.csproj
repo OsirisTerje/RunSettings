@@ -85,7 +85,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="ParallelTemplate\MyTemplate.vstemplate" />
+    <Content Include="ParallelTemplate\Parallel.vstemplate" />
     <Content Include="ParallelTemplate\STAR10.ico" />
     <Content Include="ParallelTemplate\__TemplateIcon.ico" />
     <Content Include="ReleaseNotes.txt">

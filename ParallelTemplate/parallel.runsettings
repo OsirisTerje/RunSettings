@@ -43,6 +43,7 @@
         <DomainUsage>Single</DomainUsage>
         <DumpXmlTestDiscovery>false</DumpXmlTestDiscovery>
         <DumpXmlTestResults>false</DumpXmlTestResults>
+        <ShowInternalProperties>false</ShowInternalProperties>
     </NUnit>
     -->
 </RunSettings>

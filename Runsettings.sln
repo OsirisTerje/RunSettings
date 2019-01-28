@@ -7,6 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runsettings", "Runsettings.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F8F4C9F8-881D-4F19-AC92-C87B7444D515}"
 	ProjectSection(SolutionItems) = preProject
+		b.cmd = b.cmd
+		build.cake = build.cake
+		build.ps1 = build.ps1
 		HowTo.md = HowTo.md
 	EndProjectSection
 EndProject
@@ -23,5 +26,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F6A2ED7C-EE6B-49C8-BBC0-215C1E76BD32}
 	EndGlobalSection
 EndGlobal

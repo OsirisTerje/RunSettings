@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="Runsettings..e82ac86a-72fc-486f-9840-960bae8f3eda" Version="5.3" Language="en-US" Publisher="Terje Sandstrom" />
+        <Identity Id="Runsettings..e82ac86a-72fc-486f-9840-960bae8f3eda" Version="5.4" Language="en-US" Publisher="Terje Sandstrom" />
         <DisplayName>Runsettings</DisplayName>
         <Description xml:space="preserve">A set of Runsettings solution templates for VS2017 and upwards.   Right click the solution, choose Add/New Item and choose one of the Runsettings under General, and the runsettings file is added as a solution item, and opened as XML in your editor.  See http://msdn.microsoft.com/en-us/library/vstudio/jj159530.aspx and https://msdn.microsoft.com/en-gb/library/jj635153.aspx  for information on how to customize the runsettings. </Description>
         <MoreInfo>http://msdn.microsoft.com/en-us/library/vstudio/jj159530.aspx</MoreInfo>

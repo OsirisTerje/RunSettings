@@ -156,24 +156,24 @@ Included items must then not match any entries in the exclude list to remain inc
    </AssemblyResolution>  -->
   </MSTest>
     
-    <!-- NUnit3 adapter, uncomment to set as appropriate, numeric, booleans, enums have their default values below, except RandomSeed -->
-    <!--
-    <NUnit>
-        <BasePath>D:\Dev\NUnit\nunit3-vs-adapter\demo\NUnitTestDemo\bin\Release</BasePath>
-        <PrivateBinPath>extras;more.extras</PrivateBinPath>
+    <!-- NUnit3 adapter, uncomment sections to set as appropriate, numeric, booleans, enums have their default values below, except RandomSeed -->
+   <NUnit>
+        <!--<BasePath>D:\Dev\NUnit\nunit3-vs-adapter\demo\NUnitTestDemo\bin\Release</BasePath>-->
+        <!--<PrivateBinPath>extras;more.extras</PrivateBinPath>-->
         <DefaultTimeout>0</DefaultTimeout>
-        <WorkDirectory>work</WorkDirectory>
+        <!--<WorkDirectory>work</WorkDirectory>-->
         <InternalTraceLevel>Off</InternalTraceLevel>
-        <RandomSeed>1234567</RandomSeed>  
+        <!--<RandomSeed>1234567</RandomSeed>-->  
         <NumberOfTestWorkers>-1</NumberOfTestWorkers>
         <Verbosity>0</Verbosity>
-        <UseVsKeepEngineRunning>false</UseVsKeepEngineRunning>
-        <ShadowCopyFiles>false</ShadowCopyFiles>
-        <DefaultTestNamePattern>{m}{a}</DefaultTestNamePattern>
-        <DomainUsage>Single</DomainUsage>
+        <!--<UseVsKeepEngineRunning>false</UseVsKeepEngineRunning>-->
+        <!--<ShadowCopyFiles>false</ShadowCopyFiles>-->
+        <!--<DefaultTestNamePattern>{m}{a}</DefaultTestNamePattern>-->
+        <!--<DomainUsage>Single</DomainUsage>-->
         <DumpXmlTestDiscovery>false</DumpXmlTestDiscovery>
         <DumpXmlTestResults>false</DumpXmlTestResults>
         <ShowInternalProperties>false</ShowInternalProperties>
+        <TestOutputXml>false</TestOutputXml>
     </NUnit>
-    -->
+
 </RunSettings>

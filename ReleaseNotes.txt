@@ -1,27 +1,29 @@
 ﻿Note:  VS2012, VS2013, VS2015 and VS2017 have seperate downloads, see links on each one.
 
+5.4
+    Added NUnit TestOutputXml property
 5.3 
-	Added exclude module for nunit assemblies
+    Added exclude module for nunit assemblies
 5.1
-	Added support for VS2019, also works with VS2017
-	Added new NUnit keywords
+    Added support for VS2019, also works with VS2017
+    Added new NUnit keywords
 
 4.0
-	Added support for VS 2017
-	Added support for NUnit settings
-	Updated other settings as appropriate
+    Added support for VS 2017
+    Added support for NUnit settings
+    Updated other settings as appropriate
 
 3.1:  
-	Added support for VS 2015 Update 1 with parallel testing
-	Added 3 item templates for All, Parallel only and Code coverage only
+    Added support for VS 2015 Update 1 with parallel testing
+    Added 3 item templates for All, Parallel only and Code coverage only
 
 3.0:
-	Added support for VS 2015
-	Added section for Runconfiguration
-	Added section for TestRunParameters
+    Added support for VS 2015
+    Added section for Runconfiguration
+    Added section for TestRunParameters
 
 2.0:  
-	Added support for VS 2013.  
-	Removed testadapters and test code from the coverage results.
+    Added support for VS 2013.  
+    Removed testadapters and test code from the coverage results.
 
-1.0:  Intial release.  For VS 2012
+1.0:  Initial release.  For VS 2012

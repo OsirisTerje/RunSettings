@@ -106,7 +106,7 @@ Task("Build")
 		// Find MSBuild for Visual Studio 2017
 		DirectoryPath vsLatest  = VSWhereLatest();
 		FilePath msBuildPathX64 = (vsLatest==null) ? null
-									: vsLatest.CombineWithFilePath("./MSBuild/15.0/Bin/MSBuild.exe");
+									: vsLatest.CombineWithFilePath("./MSBuild/Current/Bin/MSBuild.exe");
 
 		Information("Building using MSBuild at " + msBuildPathX64);
 		Information("Configuration is:"+configuration);

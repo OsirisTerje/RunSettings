@@ -26,6 +26,13 @@
         <!--  <AssemblyResolution>    
              <Directory path="D:\myfolder\bin\" includeSubDirectories="false"/>
    </AssemblyResolution>  -->
+   <!--In-assembly parallel, see https://devblogs.microsoft.com/devops/mstest-v2-in-assembly-parallel-test-execution/ and https://www.meziantou.net/mstest-v2-execute-tests-in-parallel.htm  -->
+   <!--    
+      <Parallelize>
+        <Workers>0</Workers>
+        <Scope>MethodLevel</Scope>
+      </Parallelize>
+     -->
     </MSTest>
 
     <!-- NUnit3 adapter, uncomment sections to set as appropriate, numeric, booleans, enums have their default values below, except RandomSeed -->

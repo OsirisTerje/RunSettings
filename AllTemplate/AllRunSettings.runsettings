@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- File name extension must be .runsettings -->
+<!-- For more information, see https://docs.microsoft.com/en-us/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019  -->
 <RunSettings>
   <!-- Configurations that affect the Test Framework -->
   <RunConfiguration>
@@ -23,6 +24,9 @@
        -->
     <!-- 0 = As many processes as possible, limited by number of cores on machine, 1 = Sequential (1 process), 2-> Given number of processes up to limit by number of cores on machine-->
     <MaxCpuCount>0</MaxCpuCount>
+    <!-- TestSessionTimeout was introduced in Visual Studio 2017 version 15.5 -->
+    <!-- Specify timeout in milliseconds. A valid value should be greater than 0 -->
+    <TestSessionTimeout>10000</TestSessionTimeout>
   </RunConfiguration>
   <DataCollectionRunSettings>
     <DataCollectors>
@@ -132,6 +136,11 @@ Included items must then not match any entries in the exclude list to remain inc
           </CodeCoverage>
         </Configuration>
       </DataCollector>
+
+      <DataCollector uri="datacollector://microsoft/VideoRecorder/1.0" assemblyQualifiedName="Microsoft.VisualStudio.TestTools.DataCollection.VideoRecorder.VideoRecorderDataCollector, Microsoft.VisualStudio.TestTools.DataCollection.VideoRecorder, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" friendlyName="Screen and Voice Recorder">
+        <!--Video data collector was introduced in Visual Studio 2017 version 15.5 -->
+      </DataCollector>
+
     </DataCollectors>
   </DataCollectionRunSettings>
   
@@ -157,6 +166,7 @@ Included items must then not match any entries in the exclude list to remain inc
   </MSTest>
     
     <!-- NUnit3 adapter, uncomment sections to set as appropriate, numeric, booleans, enums have their default values below, except RandomSeed -->
+   <!-- For documentation, see https://github.com/nunit/docs/wiki/Tips-And-Tricks -->
    <NUnit>
         <!--<BasePath>D:\Dev\NUnit\nunit3-vs-adapter\demo\NUnitTestDemo\bin\Release</BasePath>-->
         <!--<PrivateBinPath>extras;more.extras</PrivateBinPath>-->

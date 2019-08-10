@@ -1,5 +1,10 @@
 ﻿Note:  VS2012, VS2013, VS2015 and VS2017 have seperate downloads, see links on each one.
 
+5.5 
+Fixes:
+    * [3](https://github.com/OsirisTerje/RunSettings/issues/3)  Missing settings :datacollector://microsoft/VideoRecorder/1.0
+    * Added MSTest Parallel options, and updated general runconfiguration.
+
 5.4
     Added NUnit TestOutputXml and ShowInternalProperties properties
 5.3 

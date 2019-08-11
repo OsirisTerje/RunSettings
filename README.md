@@ -13,11 +13,19 @@ A solution item template that creates a set of default runsettings files under S
 
 The runsettings file is used to change the code coverage analysis settings for a test run, in particular which files to be included and excluded from analysis,  and also used to set symbol search paths.  It can also set Runconfigurations and testrunparameters, and specific settings for NUnit and MSTest. 
 
+### Parallel execution
 It can also enable [parallel run of unit tests](https://blogs.msdn.microsoft.com/visualstudioalm/2016/02/08/parallel-and-context-sensitive-test-execution-with-visual-studio-2015-update-1/).
+More information on [MSTest parallel execution](https://devblogs.microsoft.com/devops/mstest-v2-in-assembly-parallel-test-execution) and [more details here](https://github.com/microsoft/testfx-docs/blob/master/RFCs/004-In-Assembly-Parallel-Execution.md) 
+More information on [NUnit parallel execution](https://github.com/nunit/docs/wiki/Parallelizable-Attribute)
 
-There are 3 templates included, one complete which includes code coverage and parallel run, one with only code coverage, and one with only parallel run.
+### Templates
+There are 3 templates included, one complete which includes code coverage and parallel run, one with only code coverage, and one with only parallel run.  The latter can also be used as the most simple runsettings template.
 
 See this blogpost for more information :[How to exclude code from code coverage in Visual Studio](http://hermit.no/how-to-exclude-code-from-code-coverage-in-visual-studio-unit-testing-using-runsettings/) 
+
+The current version supperts VS2017 and VS2019.  
+
+#### Versions supporting older Visual Studio versions:
 
 [VS 2015 version ](https://marketplace.visualstudio.com/items?itemName=OsirisTerje.Runsettings)
 

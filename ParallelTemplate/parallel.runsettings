@@ -24,18 +24,18 @@
         <CaptureTraceOutput>true</CaptureTraceOutput>
         <DeleteDeploymentDirectoryAfterTestRunIsComplete>true</DeleteDeploymentDirectoryAfterTestRunIsComplete>
         <DeploymentEnabled>true</DeploymentEnabled>
-        <AssemblyResolution>false</AssemblyResolution>
+        <MapNotRunnableToFailed>false</MapNotRunnableToFailed>
+        <EnableBaseClassTestMethodsFromOtherAssemblies>false</EnableBaseClassTestMethodsFromOtherAssemblies>
+        <!-- <TestTimeout>5000</TestTimeout> -->
+
         <!-- Uncomment and update path for assembly resolution  -->
         <!--  <AssemblyResolution>    
                   <Directory path="D:\myfolder\bin\" includeSubDirectories="false"/>
              </AssemblyResolution>  -->
         <ForcedLegacyMode>false</ForcedLegacyMode>
-        <IgnoreTestImpact>false</IgnoreTestImpact>
         <!-- 
-           <SettingsFile>some file (require ForcedLegacyMode true) </SettingsFile>
+           <SettingsFile>a .testsettings file (require ForcedLegacyMode true) </SettingsFile>
         -->
-        <KeepExecutorAliveAfterLegacyRun>false</KeepExecutorAliveAfterLegacyRun>
-        <InProcMode>false</InProcMode>
     </MSTest>
 
     <!-- NUnit3 adapter, uncomment sections to set as appropriate, numeric, booleans, enums have their default values below, except RandomSeed -->

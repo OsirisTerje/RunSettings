@@ -24,6 +24,7 @@
         <CaptureTraceOutput>true</CaptureTraceOutput>
         <DeleteDeploymentDirectoryAfterTestRunIsComplete>true</DeleteDeploymentDirectoryAfterTestRunIsComplete>
         <DeploymentEnabled>true</DeploymentEnabled>
+        <DeployTestSourceDependencies>true</DeployTestSourceDependencies>
         <MapNotRunnableToFailed>false</MapNotRunnableToFailed>
         <EnableBaseClassTestMethodsFromOtherAssemblies>false</EnableBaseClassTestMethodsFromOtherAssemblies>
         <!-- <TestTimeout>5000</TestTimeout> -->

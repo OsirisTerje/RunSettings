@@ -164,6 +164,7 @@ Included items must then not match any entries in the exclude list to remain inc
       <CaptureTraceOutput>true</CaptureTraceOutput>
       <DeleteDeploymentDirectoryAfterTestRunIsComplete>true</DeleteDeploymentDirectoryAfterTestRunIsComplete>
       <DeploymentEnabled>true</DeploymentEnabled>
+      <DeployTestSourceDependencies>true</DeployTestSourceDependencies>
       <MapNotRunnableToFailed>false</MapNotRunnableToFailed>
       <EnableBaseClassTestMethodsFromOtherAssemblies>false</EnableBaseClassTestMethodsFromOtherAssemblies>
       <!-- <TestTimeout>5000</TestTimeout> -->

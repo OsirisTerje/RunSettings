@@ -1,17 +1,28 @@
-### RunSettings
-Item templates for runsettings files
+### RunSettings for "real" developers who write unit tests
+A set of runsettings item templates for Visual Studio 2019 and 2017. [For earlier versions see the links below] 
 
-A set of Runsettings solution templates for VS2017 and upwards (means this also support VS2019)   
-The runsettings contains separate sections for the adapters.  The settings for the [NUnit Adapter is described here](https://github.com/nunit/docs/wiki/Tips-And-Tricks). 
+The runsettings file is used by all developers who love unit tests.
 
-Right click the solution, choose Add/New Item and choose one of the Runsettings under General, and the runsettings file is added as a solution item, and opened as XML in your editor.  
+This template automates the creation of the default runsettings under solution items. 
+Never do this manually again!
 
-See http://msdn.microsoft.com/en-us/library/vstudio/jj159530.aspx and https://msdn.microsoft.com/en-gb/library/jj635153.aspx  for information on how to customize the runsettings. 
+The runsettings contains separate sections for the adapters.  The settings for the [NUnit Adapter is described here](https://github.com/nunit/docs/wiki/Tips-And-Tricks) and [MSTest adapter is described here](https://docs.microsoft.com/en-us/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019#mstest-run-settings). 
+
+### How to use
+Right click the solution. Choose Add | New Item and choose one of the Runsettings under General. Observe that the runsettings file was added as a Solution Item.   
 
 ### Details
-A solution item template that creates a set of default runsettings files under Solution Items, and saves you from having to do this manually.  See [http://msdn.microsoft.com/en-us/library/vstudio/jj159530.aspx](http://msdn.microsoft.com/en-us/library/vstudio/jj159530.aspx) for information on how to change the default settings. 
+The runsettings file is used by all developers who love unit tests.
 
-The runsettings file is used to change the code coverage analysis settings for a test run, in particular which files to be included and excluded from analysis,  and also used to set symbol search paths.  It can also set Runconfigurations and testrunparameters, and specific settings for NUnit and MSTest. 
+This template automates the creation of the default runsettings under solution items. Never do this manually again!   
+
+Also used to change the code coverage analysis settings for a test run. Set which files should be included and excluded from analysis, and also set symbol search paths.  Also set Runconfigurations and testrunparameters, and specific settings for NUnit and MSTest. 
+
+Learn how to configure and customize runsettings:
+- https://docs.microsoft.com/en-us/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019  
+- https://docs.microsoft.com/en-us/visualstudio/test/customizing-code-coverage-analysis?view=vs-2019 
+
+Enjoy!
 
 ### Parallel execution
 It can also enable [parallel run of unit tests](https://blogs.msdn.microsoft.com/visualstudioalm/2016/02/08/parallel-and-context-sensitive-test-execution-with-visual-studio-2015-update-1/).
@@ -21,14 +32,19 @@ More information on [NUnit parallel execution](https://github.com/nunit/docs/wik
 ### Templates
 There are 3 templates included, one complete which includes code coverage and parallel run, one with only code coverage, and one with only parallel run.  The latter can also be used as the most simple runsettings template.
 
-See this blogpost for more information :[How to exclude code from code coverage in Visual Studio](http://hermit.no/how-to-exclude-code-from-code-coverage-in-visual-studio-unit-testing-using-runsettings/) 
+For more information see this blog post: [How to exclude code from code coverage in Visual Studio](http://hermit.no/how-to-exclude-code-from-code-coverage-in-visual-studio-unit-testing-using-runsettings/) 
 
-The current version supperts VS2017 and VS2019.  
+### Why are there no settings for XUnit included
 
-#### Versions supporting older Visual Studio versions:
+XUnit does not support the use of a runsettings file, but use environment variables instead. See the answer in this [SO post](https://stackoverflow.com/questions/54977531/how-to-read-runsettings-test-parameter-in-xunit-fixture) and this [github issue](https://github.com/xunit/xunit/issues/1439.)
+
+#### Older Visual Studio versions:
 
 [VS 2015 version ](https://marketplace.visualstudio.com/items?itemName=OsirisTerje.Runsettings)
 
 [VS 2013 version ](/vsgallery/704ebd18-7d60-4341-9224-532f73229c74)
 
 [VS 2012 version ](/vsgallery/601bd207-5889-4935-b101-3ebe1f25aafa)
+
+#### Credits
+Thanks to [Adam Cogan](https://adamcogan.com/) for your help! 

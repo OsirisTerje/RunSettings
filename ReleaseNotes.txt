@@ -1,4 +1,8 @@
 ﻿Note:  VS2012, VS2013, VS2015 and VS2017/19 have seperate downloads, see links on each one.
+
+5.6.1 
+	Documentation fixes.  Updated links to information. 
+
 5.6
 	* More updates to MSTest settings
 

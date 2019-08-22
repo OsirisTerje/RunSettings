@@ -4,12 +4,12 @@
         <Identity Id="Runsettings..e82ac86a-72fc-486f-9840-960bae8f3eda" Version="5.6.1" Language="en-US" Publisher="Terje Sandstrom" />
         <DisplayName>Runsettings</DisplayName>
         <Description xml:space="preserve">A set of runsettings item templates for Visual Studio 2019 and 2017   Right click the solution, choose Add/New Item and choose one of the Runsettings under General, and the runsettings file is added as a solution item, and opened as XML in your editor.  See http://msdn.microsoft.com/en-us/library/vstudio/jj159530.aspx and https://msdn.microsoft.com/en-gb/library/jj635153.aspx  for information on how to customize the runsettings. </Description>
-        <MoreInfo>https://docs.microsoft.com/en-us/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file</MoreInfo>
+        <MoreInfo>https://github.com/OsirisTerje/RunSettings/blob/master/README.md</MoreInfo>
         <License>License.txt</License>
         <ReleaseNotes>ReleaseNotes.txt</ReleaseNotes>
         <Icon>STAR10.GIF</Icon>
         <PreviewImage>11-06-2013 10-42-19.png</PreviewImage>
-        <Tags>test runsettings codecoverage nunit mstest</Tags>
+        <Tags>test runsettings codecoverage nunit mstest unittest</Tags>
     </Metadata>
     <Installation>
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0,)" />

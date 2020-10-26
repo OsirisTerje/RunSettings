@@ -3,12 +3,42 @@
 
 <RunSettings>
   <RunConfiguration>
+    <!-- See https://github.com/microsoft/vstest-docs/blob/master/docs/configure.md -->
+    <!-- 1. Test related settings -->
+    <!-- [x86] | x64: architecture of test host -->
+    <!--<TargetPlatform>x86</TargetPlatform>-->
+
+    <!-- Framework35 | [Framework40] | Framework45 -->
+    <!--<TargetFrameworkVersion>Framework40</TargetFrameworkVersion>-->
+
+    <!-- Path to Test Adapters -->
+    <!--<TestAdaptersPaths>%SystemDrive%\Temp\foo;%SystemDrive%\Temp\bar</TestAdaptersPaths>-->
+
+    <!-- Path relative to solution directory -->
+    <ResultsDirectory>.\TestResults</ResultsDirectory>
+    <SolutionDirectory>.\TestResults</SolutionDirectory>
+
     <!-- 0 = As many processes as possible, limited by number of cores on machine, 1 = Sequential (1 process), 2-> Given number of processes up to limit by number of cores on machine-->
     <MaxCpuCount>0</MaxCpuCount>
+
+    <!-- TestSessionTimeout was introduced in Visual Studio 2017 version 15.5 -->
+    <!-- Specify timeout in milliseconds. A valid value should be >= 0. If 0, timeout will be infinity-->
+    <TestSessionTimeout>10000</TestSessionTimeout>
+
+    <!-- STA | MTA  default is STA for .NET Full and MTA for .NET Core-->
+    <!--<ExecutionThreadApartmentState>STA</ExecutionThreadApartmentState>-->
+
+    <!-- 2. Hints to adapters to behave in a specific way -->
+    <DesignMode>false</DesignMode>
     <!-- Disables in-assembly parallel execution, applies to both MSTest and NUnit -->
     <DisableParallelization>false</DisableParallelization>
-  </RunConfiguration>
+    <DisableAppDomain>false</DisableAppDomain>
+    <CollectSourceInformation>true</CollectSourceInformation>
 
+    <!-- 3. Runner related configuration -->
+    <BatchSize>10</BatchSize>
+
+  </RunConfiguration>
     <!--
     <TestRunParameters>
         <Parameter name="webAppUrl" value="http://localhost" />
@@ -40,7 +70,7 @@
     </MSTest>
 
     <!-- NUnit3 adapter, uncomment sections to set as appropriate, numeric, booleans, enums have their default values below, except RandomSeed -->
-    <!-- For documentation, see https://github.com/nunit/docs/wiki/Tips-And-Tricks -->
+    <!-- For documentation, see https://docs.nunit.org/articles/vs-test-adapter/Tips-And-Tricks.html -->
     <NUnit>
       <!--<BasePath>D:\Dev\NUnit\nunit3-vs-adapter\demo\NUnitTestDemo\bin\Release</BasePath>-->
       <!--<PrivateBinPath>extras;more.extras</PrivateBinPath>-->
@@ -57,7 +87,16 @@
       <DumpXmlTestDiscovery>false</DumpXmlTestDiscovery>
       <DumpXmlTestResults>false</DumpXmlTestResults>
       <ShowInternalProperties>false</ShowInternalProperties>
-      <TestOutputXml>false</TestOutputXml>
+      <!--<TestOutputXml>TestOutputXml</TestOutputXml>-->
+      <!--<Where></Where>-->   <!-- NUnit filter expression, see https://docs.nunit.org/articles/nunit/running-tests/Test-Selection-Language.html  -->
+      <ConsoleOut>1</ConsoleOut>
+      <StopOnError>false</StopOnError>
+      <SkipNonTestAssemblies>false</SkipNonTestAssemblies>
+      <MapWarningTo>Skipped</MapWarningTo>  <!--Passed, Failed or Skipped-->
+      <DisplayName>Name</DisplayName>   <!--Name, FullName or FullNameSep-->
+      <FullnameSeparator>:</FullnameSeparator>
+      <DiscoveryMethod>Current</DiscoveryMethod>   <!--Legacy or Current-->
+      <AssemblySelectLimit>2000</AssemblySelectLimit>
     </NUnit>
 </RunSettings>
 

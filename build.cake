@@ -13,7 +13,7 @@ var configuration = Argument("configuration", "Release");
 // SET PACKAGE VERSION
 //////////////////////////////////////////////////////////////////////
 
-var version = "5.6";
+var version = "5.7";
 var modifier = "";
 
 var dbgSuffix = configuration == "Debug" ? "-dbg" : "";

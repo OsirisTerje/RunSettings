@@ -1,4 +1,6 @@
 ﻿Note:  VS2012, VS2013, VS2015 and VS2017/19 have seperate downloads, see links on each one.
+5.8
+    Adding sections for data collector for Blame, LoggerRunSettings, and updating the general RunConfiguration with new elements.
 
 5.6.1 
 	Documentation fixes.  Updated links to information. 

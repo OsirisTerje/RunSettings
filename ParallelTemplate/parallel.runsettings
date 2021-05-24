@@ -13,17 +13,20 @@
 
     <!-- Path to Test Adapters -->
     <!--<TestAdaptersPaths>%SystemDrive%\Temp\foo;%SystemDrive%\Temp\bar</TestAdaptersPaths>-->
+    <TreatTestAdapterErrorsAsWarnings>false</TreatTestAdapterErrorsAsWarnings>
 
     <!-- Path relative to solution directory -->
     <ResultsDirectory>.\TestResults</ResultsDirectory>
-    <SolutionDirectory>.\TestResults</SolutionDirectory>
-
+  
     <!-- 0 = As many processes as possible, limited by number of cores on machine, 1 = Sequential (1 process), 2-> Given number of processes up to limit by number of cores on machine-->
     <MaxCpuCount>0</MaxCpuCount>
 
     <!-- TestSessionTimeout was introduced in Visual Studio 2017 version 15.5 -->
     <!-- Specify timeout in milliseconds. A valid value should be >= 0. If 0, timeout will be infinity-->
     <TestSessionTimeout>10000</TestSessionTimeout>
+    
+    <!-- Specify a Boolean value, which defines the exit code when no tests are discovered.-->
+    <TreatNoTestsAsError>false</TreatNoTestsAsError>
 
     <!-- STA | MTA  default is STA for .NET Full and MTA for .NET Core-->
     <!--<ExecutionThreadApartmentState>STA</ExecutionThreadApartmentState>-->
@@ -39,12 +42,41 @@
     <BatchSize>10</BatchSize>
 
   </RunConfiguration>
+
+<!-- <DataCollectionRunSettings>
+  <DataCollectors>
+     <!-- <DataCollector friendlyName="blame" enabled="True"> --><!-- This option can help you isolate a problematic test that causes a test host crash. Running the collector creates an output file (Sequence.xml) in TestResults, which captures the order of execution of the test before the crash. -->
+  </DataCollectors>
+</DataCollectionRunSettings> -->
+
     <!--
     <TestRunParameters>
         <Parameter name="webAppUrl" value="http://localhost" />
         <Parameter name="webAppUserName" value="Admin" />
     </TestRunParameters>
+
+ <!--  Section for loggers,  see https://docs.microsoft.com/en-us/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019#loggerrunsettings-element 
+  <LoggerRunSettings>
+      <Loggers>
+        <Logger friendlyName="console" enabled="True">
+          <Configuration>
+              <Verbosity>quiet</Verbosity>
+          </Configuration>
+        </Logger>
+        <Logger friendlyName="trx" enabled="True">
+          <Configuration>
+            <LogFileName>foo.trx</LogFileName>
+          </Configuration>
+        </Logger>
+        <Logger friendlyName="html" enabled="True">
+          <Configuration>
+            <LogFileName>foo.html</LogFileName>
+          </Configuration>
+        </Logger>
+      </Loggers>
+    </LoggerRunSettings>
 -->
+
 
     <!-- Adapter Specific sections -->
 

@@ -9,7 +9,9 @@ Never do this manually again!
 The runsettings contains separate sections for the adapters.  The settings for the [NUnit Adapter is described here](https://github.com/nunit/docs/wiki/Tips-And-Tricks) and [MSTest adapter is described here](https://docs.microsoft.com/en-us/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019#mstest-run-settings). 
 
 ### How to use
-Right click the solution. Choose Add | New Item and choose one of the Runsettings under General. Observe that the runsettings file was added as a Solution Item.   
+Right click the solution. Choose Add | New Item and choose one of the Runsettings under General. Observe that the runsettings file was added as a Solution Item.
+
+Note that if you drop the name, and just let the file be named ```.runsettings``` it will be automatically picked up by Visual Studio. 
 
 ### Details
 The runsettings file is used by all developers who love unit tests.

@@ -3,64 +3,64 @@
 <!-- For more information, see https://docs.microsoft.com/en-us/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019  -->
 
 <RunSettings>
-  <RunConfiguration>
-    <!-- See https://github.com/microsoft/vstest-docs/blob/master/docs/configure.md -->
-    <!-- 1. Test related settings -->
-    <!-- [x86] | x64: architecture of test host -->
-    <!--<TargetPlatform>x86</TargetPlatform>-->
+    <RunConfiguration>
+        <!-- See https://github.com/microsoft/vstest-docs/blob/master/docs/configure.md -->
+        <!-- 1. Test related settings -->
+        <!-- [x86] | x64: architecture of test host -->
+        <!--<TargetPlatform>x86</TargetPlatform>-->
 
-    <!-- Framework35 | [Framework40] | Framework45 -->
-    <!--<TargetFrameworkVersion>Framework40</TargetFrameworkVersion>-->
+        <!-- Framework35 | [Framework40] | Framework45 -->
+        <!--<TargetFrameworkVersion>Framework40</TargetFrameworkVersion>-->
 
-    <!-- Path to Test Adapters -->
-    <!--<TestAdaptersPaths>%SystemDrive%\Temp\foo;%SystemDrive%\Temp\bar</TestAdaptersPaths>-->
-    <TreatTestAdapterErrorsAsWarnings>false</TreatTestAdapterErrorsAsWarnings>
-    <!-- Path relative to solution directory -->
-    <ResultsDirectory>.\TestResults</ResultsDirectory>
+        <!-- Path to Test Adapters -->
+        <!--<TestAdaptersPaths>%SystemDrive%\Temp\foo;%SystemDrive%\Temp\bar</TestAdaptersPaths>-->
+        <TreatTestAdapterErrorsAsWarnings>false</TreatTestAdapterErrorsAsWarnings>
+        <!-- Path relative to solution directory -->
+        <ResultsDirectory>.\TestResults</ResultsDirectory>
 
-    <!-- 0 = As many processes as possible, limited by number of cores on machine, 1 = Sequential (1 process), 2-> Given number of processes up to limit by number of cores on machine-->
-    <MaxCpuCount>1</MaxCpuCount>
-    
-    <!-- TestSessionTimeout was introduced in Visual Studio 2017 version 15.5 -->
-    <!-- Specify timeout in milliseconds. A valid value should be >= 0. If 0, timeout will be infinity-->
-    <TestSessionTimeout>10000</TestSessionTimeout>
+        <!-- 0 = As many processes as possible, limited by number of cores on machine, 1 = Sequential (1 process), 2-> Given number of processes up to limit by number of cores on machine-->
+        <MaxCpuCount>1</MaxCpuCount>
 
-    <!-- Specify a Boolean value, which defines the exit code when no tests are discovered.-->
-    <TreatNoTestsAsError>false</TreatNoTestsAsError>
+        <!-- TestSessionTimeout was introduced in Visual Studio 2017 version 15.5 -->
+        <!-- Specify timeout in milliseconds. A valid value should be >= 0. If 0, timeout will be infinity-->
+        <TestSessionTimeout>10000</TestSessionTimeout>
 
-    <!-- STA | MTA  default is STA for .NET Full and MTA for .NET Core-->
-    <!--<ExecutionThreadApartmentState>STA</ExecutionThreadApartmentState>-->
+        <!-- Specify a Boolean value, which defines the exit code when no tests are discovered.-->
+        <TreatNoTestsAsError>false</TreatNoTestsAsError>
 
-    <!-- 2. Hints to adapters to behave in a specific way -->
-    <DesignMode>false</DesignMode>
-    <!-- Disables in-assembly parallel execution, applies to both MSTest and NUnit -->
-    <DisableParallelization>false</DisableParallelization>
-    <DisableAppDomain>false</DisableAppDomain>
-    <CollectSourceInformation>true</CollectSourceInformation>
+        <!-- STA | MTA  default is STA for .NET Full and MTA for .NET Core-->
+        <!--<ExecutionThreadApartmentState>STA</ExecutionThreadApartmentState>-->
 
-    <!-- 3. Runner related configuration -->
-    <BatchSize>10</BatchSize>
+        <!-- 2. Hints to adapters to behave in a specific way -->
+        <DesignMode>false</DesignMode>
+        <!-- Disables in-assembly parallel execution, applies to both MSTest and NUnit -->
+        <DisableParallelization>false</DisableParallelization>
+        <DisableAppDomain>false</DisableAppDomain>
+        <CollectSourceInformation>true</CollectSourceInformation>
 
-  </RunConfiguration>
-  
-  <DataCollectionRunSettings>
-    <DataCollectors>
-      <DataCollector friendlyName="Code Coverage" uri="datacollector://Microsoft/CodeCoverage/2.0" assemblyQualifiedName="Microsoft.VisualStudio.Coverage.DynamicCoverageDataCollector, Microsoft.VisualStudio.TraceCollector, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-        <Configuration>
-          <CodeCoverage>
-            <!--
+        <!-- 3. Runner related configuration -->
+        <BatchSize>10</BatchSize>
+
+    </RunConfiguration>
+
+    <DataCollectionRunSettings>
+        <DataCollectors>
+            <DataCollector friendlyName="Code Coverage" uri="datacollector://Microsoft/CodeCoverage/2.0" assemblyQualifiedName="Microsoft.VisualStudio.Coverage.DynamicCoverageDataCollector, Microsoft.VisualStudio.TraceCollector, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+                <Configuration>
+                    <CodeCoverage>
+                        <!--
 Additional paths to search for .pdb (symbol) files. Symbols must be found for modules to be instrumented.
 If .pdb files are in the same folder as the .dll or .exe files, they are automatically found. Otherwise, specify them here.
 Note that searching for symbols increases code coverage runtime. So keep this small and local.
 -->
-            <!--           
+                        <!--           
             <SymbolSearchPaths>              
                    <Path>C:\Users\User\Documents\Visual Studio 2013\Projects\ProjectX\bin\Debug</Path>
                    <Path>\\mybuildshare\builds\ProjectX</Path>
             </SymbolSearchPaths>
 -->
 
-            <!--
+                        <!--
 About include/exclude lists:
 Empty "Include" clauses imply all; empty "Exclude" clauses imply none.
 Each element in the list is a regular expression (ECMAScript syntax). See http://msdn.microsoft.com/library/2k3te2cs.aspx.
@@ -68,98 +68,100 @@ An item must first match at least one entry in the include list to be included.
 Included items must then not match any entries in the exclude list to remain included.
 -->
 
-            <!-- Match assembly file paths: -->
-            <ModulePaths>
-              <Include>
-                <ModulePath>.*\.dll$</ModulePath>
-                <ModulePath>.*\.exe$</ModulePath>
-              </Include>
-              <Exclude>
-                <ModulePath>.*CPPUnitTestFramework.*</ModulePath>
-                <ModulePath>.*TestAdapter.*</ModulePath>
-                <ModulePath>.*nunit.*</ModulePath>
-              </Exclude>
-            </ModulePaths>
+                        <!-- Match assembly file paths: -->
+                        <ModulePaths>
+                            <Include>
+                                <ModulePath>.*\.dll$</ModulePath>
+                                <ModulePath>.*\.exe$</ModulePath>
+                            </Include>
+                            <Exclude>
+                                <ModulePath>.*CPPUnitTestFramework.*</ModulePath>
+                                <ModulePath>.*TestAdapter.*</ModulePath>
+                                <ModulePath>.*nunit.*</ModulePath>
+                            </Exclude>
+                        </ModulePaths>
 
-            <!-- Match fully qualified names of functions: -->
-            <!-- (Use "\." to delimit namespaces in C# or Visual Basic, "::" in C++.)  -->
-            <Functions>
-              <Exclude>
-                <Function>^Fabrikam\.UnitTest\..*</Function>
-                <Function>^std::.*</Function>
-                <Function>^ATL::.*</Function>
-                <Function>.*::__GetTestMethodInfo.*</Function>
-                <Function>^Microsoft::VisualStudio::CppCodeCoverageFramework::.*</Function>
-                <Function>^Microsoft::VisualStudio::CppUnitTestFramework::.*</Function>
-              </Exclude>
-            </Functions>
+                        <!-- Match fully qualified names of functions: -->
+                        <!-- (Use "\." to delimit namespaces in C# or Visual Basic, "::" in C++.)  -->
+                        <Functions>
+                            <Exclude>
+                                <Function>^Fabrikam\.UnitTest\..*</Function>
+                                <Function>^std::.*</Function>
+                                <Function>^ATL::.*</Function>
+                                <Function>.*::__GetTestMethodInfo.*</Function>
+                                <Function>^Microsoft::VisualStudio::CppCodeCoverageFramework::.*</Function>
+                                <Function>^Microsoft::VisualStudio::CppUnitTestFramework::.*</Function>
+                            </Exclude>
+                        </Functions>
 
-            <!-- Match attributes on any code element: -->
-            <Attributes>
-              <Exclude>
-                <!-- Don’t forget "Attribute" at the end of the name -->
-                <Attribute>^System.Diagnostics.DebuggerHiddenAttribute$</Attribute>
-                <Attribute>^System.Diagnostics.DebuggerNonUserCodeAttribute$</Attribute>
-                <Attribute>^System.Runtime.CompilerServices.CompilerGeneratedAttribute$</Attribute>
-                <Attribute>^System.CodeDom.Compiler.GeneratedCodeAttribute$</Attribute>
-                <Attribute>^System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute$</Attribute>
-                <Attribute>^NUnit.Framework.TestFixtureAttribute$</Attribute>
-                <Attribute>^Xunit.FactAttribute$</Attribute>
-                <Attribute>^Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute$</Attribute>
-              </Exclude>
-            </Attributes>
+                        <!-- Match attributes on any code element: -->
+                        <Attributes>
+                            <Exclude>
+                                <!-- Don’t forget "Attribute" at the end of the name -->
+                                <Attribute>^System.Diagnostics.DebuggerHiddenAttribute$</Attribute>
+                                <Attribute>^System.Diagnostics.DebuggerNonUserCodeAttribute$</Attribute>
+                                <Attribute>^System.Runtime.CompilerServices.CompilerGeneratedAttribute$</Attribute>
+                                <Attribute>^System.CodeDom.Compiler.GeneratedCodeAttribute$</Attribute>
+                                <Attribute>^System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute$</Attribute>
+                                <Attribute>^NUnit.Framework.TestFixtureAttribute$</Attribute>
+                                <Attribute>^Xunit.FactAttribute$</Attribute>
+                                <Attribute>^Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute$</Attribute>
+                            </Exclude>
+                        </Attributes>
 
-            <!-- Match the path of the source files in which each method is defined: -->
-            <Sources>
-              <Exclude>
-                <Source>.*\\atlmfc\\.*</Source>
-                <Source>.*\\vctools\\.*</Source>
-                <Source>.*\\public\\sdk\\.*</Source>
-                <Source>.*\\microsoft sdks\\.*</Source>
-                <Source>.*\\vc\\include\\.*</Source>
-              </Exclude>
-            </Sources>
+                        <!-- Match the path of the source files in which each method is defined: -->
+                        <Sources>
+                            <Exclude>
+                                <Source>.*\\atlmfc\\.*</Source>
+                                <Source>.*\\vctools\\.*</Source>
+                                <Source>.*\\public\\sdk\\.*</Source>
+                                <Source>.*\\microsoft sdks\\.*</Source>
+                                <Source>.*\\vc\\include\\.*</Source>
+                            </Exclude>
+                        </Sources>
 
-            <!-- Match the company name property in the assembly: -->
-            <CompanyNames>
-              <Exclude>
-                <CompanyName>.*microsoft.*</CompanyName>
-              </Exclude>
-            </CompanyNames>
+                        <!-- Match the company name property in the assembly: -->
+                        <CompanyNames>
+                            <Exclude>
+                                <CompanyName>.*microsoft.*</CompanyName>
+                            </Exclude>
+                        </CompanyNames>
 
-            <!-- Match the public key token of a signed assembly: -->
-            <PublicKeyTokens>
-              <!-- Exclude Visual Studio extensions: -->
-              <Exclude>
-                <PublicKeyToken>^B77A5C561934E089$</PublicKeyToken>
-                <PublicKeyToken>^B03F5F7F11D50A3A$</PublicKeyToken>
-                <PublicKeyToken>^31BF3856AD364E35$</PublicKeyToken>
-                <PublicKeyToken>^89845DCD8080CC91$</PublicKeyToken>
-                <PublicKeyToken>^71E9BCE111E9429C$</PublicKeyToken>
-                <PublicKeyToken>^8F50407C4E9E73B6$</PublicKeyToken>
-                <PublicKeyToken>^E361AF139669C375$</PublicKeyToken>
-              </Exclude>
-            </PublicKeyTokens>
+                        <!-- Match the public key token of a signed assembly: -->
+                        <PublicKeyTokens>
+                            <!-- Exclude Visual Studio extensions: -->
+                            <Exclude>
+                                <PublicKeyToken>^B77A5C561934E089$</PublicKeyToken>
+                                <PublicKeyToken>^B03F5F7F11D50A3A$</PublicKeyToken>
+                                <PublicKeyToken>^31BF3856AD364E35$</PublicKeyToken>
+                                <PublicKeyToken>^89845DCD8080CC91$</PublicKeyToken>
+                                <PublicKeyToken>^71E9BCE111E9429C$</PublicKeyToken>
+                                <PublicKeyToken>^8F50407C4E9E73B6$</PublicKeyToken>
+                                <PublicKeyToken>^E361AF139669C375$</PublicKeyToken>
+                            </Exclude>
+                        </PublicKeyTokens>
 
 
-            <!-- We recommend you do not change the following values: -->
-            <UseVerifiableInstrumentation>True</UseVerifiableInstrumentation>
-            <AllowLowIntegrityProcesses>True</AllowLowIntegrityProcesses>
-            <CollectFromChildProcesses>True</CollectFromChildProcesses>
-            <CollectAspDotNet>False</CollectAspDotNet>
+                        <!-- We recommend you do not change the following values: -->
+                        <UseVerifiableInstrumentation>True</UseVerifiableInstrumentation>
+                        <AllowLowIntegrityProcesses>True</AllowLowIntegrityProcesses>
+                        <CollectFromChildProcesses>True</CollectFromChildProcesses>
+                        <CollectAspDotNet>False</CollectAspDotNet>
 
-          </CodeCoverage>
-        </Configuration>
-      </DataCollector>
+                    </CodeCoverage>
+                </Configuration>
+            </DataCollector>
 
-      <DataCollector uri="datacollector://microsoft/VideoRecorder/1.0" assemblyQualifiedName="Microsoft.VisualStudio.TestTools.DataCollection.VideoRecorder.VideoRecorderDataCollector, Microsoft.VisualStudio.TestTools.DataCollection.VideoRecorder, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" friendlyName="Screen and Voice Recorder">
-        <!--Video data collector was introduced in Visual Studio 2017 version 15.5 -->
-      </DataCollector>
- 
- <!-- <DataCollector friendlyName="blame" enabled="True"> --><!-- This option can help you isolate a problematic test that causes a test host crash. Running the collector creates an output file (Sequence.xml) in TestResults, which captures the order of execution of the test before the crash. -->
- 
-    </DataCollectors>
-  </DataCollectionRunSettings>
+            <DataCollector uri="datacollector://microsoft/VideoRecorder/1.0" assemblyQualifiedName="Microsoft.VisualStudio.TestTools.DataCollection.VideoRecorder.VideoRecorderDataCollector, Microsoft.VisualStudio.TestTools.DataCollection.VideoRecorder, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" friendlyName="Screen and Voice Recorder">
+                <!--Video data collector was introduced in Visual Studio 2017 version 15.5 -->
+            </DataCollector>
+            
+            <!-- This option can help you isolate a problematic test that causes a test host crash. Running the collector creates an output file (Sequence.xml) in TestResults, which captures the order of execution of the test before the crash. -->
+            <!-- <DataCollector friendlyName="blame" enabled="True"> 
+      </DataCollector>  -->
+
+        </DataCollectors>
+    </DataCollectionRunSettings>
 
     <!--
   <TestRunParameters>
@@ -168,7 +170,7 @@ Included items must then not match any entries in the exclude list to remain inc
   </TestRunParameters>
   -->
 
-<!--  Section for loggers,  see https://docs.microsoft.com/en-us/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019#loggerrunsettings-element 
+    <!--  Section for loggers,  see https://docs.microsoft.com/en-us/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019#loggerrunsettings-element 
   <LoggerRunSettings>
       <Loggers>
         <Logger friendlyName="console" enabled="True">
@@ -195,53 +197,56 @@ Included items must then not match any entries in the exclude list to remain inc
 
     <!-- MSTest adapter -->
     <MSTest>
-      <MapInconclusiveToFailed>false</MapInconclusiveToFailed>
-      <CaptureTraceOutput>true</CaptureTraceOutput>
-      <DeleteDeploymentDirectoryAfterTestRunIsComplete>true</DeleteDeploymentDirectoryAfterTestRunIsComplete>
-      <DeploymentEnabled>true</DeploymentEnabled>
-      <DeployTestSourceDependencies>true</DeployTestSourceDependencies>
-      <MapNotRunnableToFailed>false</MapNotRunnableToFailed>
-      <EnableBaseClassTestMethodsFromOtherAssemblies>false</EnableBaseClassTestMethodsFromOtherAssemblies>
-      <!-- <TestTimeout>5000</TestTimeout> -->
+        <MapInconclusiveToFailed>false</MapInconclusiveToFailed>
+        <CaptureTraceOutput>true</CaptureTraceOutput>
+        <DeleteDeploymentDirectoryAfterTestRunIsComplete>true</DeleteDeploymentDirectoryAfterTestRunIsComplete>
+        <DeploymentEnabled>true</DeploymentEnabled>
+        <DeployTestSourceDependencies>true</DeployTestSourceDependencies>
+        <MapNotRunnableToFailed>false</MapNotRunnableToFailed>
+        <EnableBaseClassTestMethodsFromOtherAssemblies>false</EnableBaseClassTestMethodsFromOtherAssemblies>
+        <!-- <TestTimeout>5000</TestTimeout> -->
 
-      <!-- Uncomment and update path for assembly resolution  -->
-      <!--  <AssemblyResolution>    
+        <!-- Uncomment and update path for assembly resolution  -->
+        <!--  <AssemblyResolution>    
                   <Directory path="D:\myfolder\bin\" includeSubDirectories="false"/>
              </AssemblyResolution>  -->
-      <ForcedLegacyMode>false</ForcedLegacyMode>
-      <!-- 
+        <ForcedLegacyMode>false</ForcedLegacyMode>
+        <!-- 
            <SettingsFile>a .testsettings file (require ForcedLegacyMode true) </SettingsFile>
         -->
     </MSTest>
 
-  <!-- NUnit3 adapter, uncomment sections to set as appropriate, numeric, booleans, enums have their default values below, except RandomSeed -->
-  <!-- For documentation, see https://docs.nunit.org/articles/vs-test-adapter/Tips-And-Tricks.html -->
-  <NUnit>
-    <!--<BasePath>D:\Dev\NUnit\nunit3-vs-adapter\demo\NUnitTestDemo\bin\Release</BasePath>-->
-    <!--<PrivateBinPath>extras;more.extras</PrivateBinPath>-->
-    <DefaultTimeout>0</DefaultTimeout>
-    <!--<WorkDirectory>work</WorkDirectory>-->
-    <InternalTraceLevel>Off</InternalTraceLevel>
-    <!--<RandomSeed>1234567</RandomSeed>-->
-    <NumberOfTestWorkers>-1</NumberOfTestWorkers>
-    <Verbosity>0</Verbosity>
-    <!--<UseVsKeepEngineRunning>false</UseVsKeepEngineRunning>-->
-    <!--<ShadowCopyFiles>false</ShadowCopyFiles>-->
-    <!--<DefaultTestNamePattern>{m}{a}</DefaultTestNamePattern>-->
-    <!--<DomainUsage>Single</DomainUsage>-->
-    <DumpXmlTestDiscovery>false</DumpXmlTestDiscovery>
-    <DumpXmlTestResults>false</DumpXmlTestResults>
-    <ShowInternalProperties>false</ShowInternalProperties>
-    <!--<TestOutputXml>TestOutputXml</TestOutputXml>-->
-    <!--<Where></Where>-->
-    <!-- NUnit filter expression, see https://docs.nunit.org/articles/nunit/running-tests/Test-Selection-Language.html  -->
-    <ConsoleOut>1</ConsoleOut>
-    <StopOnError>false</StopOnError>
-    <SkipNonTestAssemblies>false</SkipNonTestAssemblies>
-    <MapWarningTo>Skipped</MapWarningTo> <!--Passed, Failed or Skipped-->
-    <DisplayName>Name</DisplayName> <!--Name, FullName or FullNameSep-->
-    <FullnameSeparator>:</FullnameSeparator>
-    <DiscoveryMethod>Current</DiscoveryMethod> <!--Legacy or Current-->
-    <AssemblySelectLimit>2000</AssemblySelectLimit>
-  </NUnit>
+    <!-- NUnit3 adapter, uncomment sections to set as appropriate, numeric, booleans, enums have their default values below, except RandomSeed -->
+    <!-- For documentation, see https://docs.nunit.org/articles/vs-test-adapter/Tips-And-Tricks.html -->
+    <NUnit>
+        <!--<BasePath>D:\Dev\NUnit\nunit3-vs-adapter\demo\NUnitTestDemo\bin\Release</BasePath>-->
+        <!--<PrivateBinPath>extras;more.extras</PrivateBinPath>-->
+        <DefaultTimeout>0</DefaultTimeout>
+        <!--<WorkDirectory>work</WorkDirectory>-->
+        <InternalTraceLevel>Off</InternalTraceLevel>
+        <!--<RandomSeed>1234567</RandomSeed>-->
+        <NumberOfTestWorkers>-1</NumberOfTestWorkers>
+        <Verbosity>0</Verbosity>
+        <!--<UseVsKeepEngineRunning>false</UseVsKeepEngineRunning>-->
+        <!--<ShadowCopyFiles>false</ShadowCopyFiles>-->
+        <!--<DefaultTestNamePattern>{m}{a}</DefaultTestNamePattern>-->
+        <!--<DomainUsage>Single</DomainUsage>-->
+        <DumpXmlTestDiscovery>false</DumpXmlTestDiscovery>
+        <DumpXmlTestResults>false</DumpXmlTestResults>
+        <ShowInternalProperties>false</ShowInternalProperties>
+        <!--<TestOutputXml>TestOutputXml</TestOutputXml>-->
+        <!--<Where></Where>-->
+        <!-- NUnit filter expression, see https://docs.nunit.org/articles/nunit/running-tests/Test-Selection-Language.html  -->
+        <ConsoleOut>1</ConsoleOut>
+        <StopOnError>false</StopOnError>
+        <SkipNonTestAssemblies>false</SkipNonTestAssemblies>
+        <MapWarningTo>Skipped</MapWarningTo>
+        <!--Passed, Failed or Skipped-->
+        <DisplayName>Name</DisplayName>
+        <!--Name, FullName or FullNameSep-->
+        <FullnameSeparator>:</FullnameSeparator>
+        <DiscoveryMethod>Current</DiscoveryMethod>
+        <!--Legacy or Current-->
+        <AssemblySelectLimit>2000</AssemblySelectLimit>
+    </NUnit>
 </RunSettings>

@@ -30,14 +30,12 @@
         <!-- STA | MTA  default is STA for .NET Full and MTA for .NET Core-->
         <!--<ExecutionThreadApartmentState>STA</ExecutionThreadApartmentState>-->
 
-        <!-- 2. Hints to adapters to behave in a specific way -->
-        <DesignMode>false</DesignMode>
         <!-- Disables in-assembly parallel execution, applies to both MSTest and NUnit -->
         <DisableParallelization>false</DisableParallelization>
         <DisableAppDomain>false</DisableAppDomain>
         <CollectSourceInformation>true</CollectSourceInformation>
 
-        <!-- 3. Runner related configuration -->
+        <!-- Runner related configuration -->
         <BatchSize>10</BatchSize>
 
     </RunConfiguration>

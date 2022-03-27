@@ -1,12 +1,12 @@
 ### RunSettings for "real" developers who write unit tests
-A set of runsettings item templates for Visual Studio 2019 and 2017. [For earlier versions see the links below] 
+A set of runsettings item templates for Visual Studio 2022, 2019 and 2017. [For earlier versions see the links below] 
 
 The runsettings file is used by all developers who love unit tests.
 
 This template automates the creation of the default runsettings under solution items. 
 Never do this manually again!
 
-The runsettings contains separate sections for the adapters.  The settings for the [NUnit Adapter is described here](https://github.com/nunit/docs/wiki/Tips-And-Tricks) and [MSTest adapter is described here](https://docs.microsoft.com/en-us/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019#mstest-run-settings). 
+The runsettings contains separate sections for the adapters.  The settings for the [NUnit Adapter is described here](https://github.com/nunit/docs/wiki/Tips-And-Tricks) and [MSTest adapter is described here](https://docs.microsoft.com/en-us/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2022#mstest-run-settings). 
 
 ### How to use
 Right click the solution. Choose Add | New Item and choose one of the Runsettings under General. Observe that the runsettings file was added as a Solution Item.
@@ -21,8 +21,8 @@ This template automates the creation of the default runsettings under solution i
 Also used to change the code coverage analysis settings for a test run. Set which files should be included and excluded from analysis, and also set symbol search paths.  Also set Runconfigurations and testrunparameters, and specific settings for NUnit and MSTest. 
 
 Learn how to configure and customize runsettings:
-- https://docs.microsoft.com/en-us/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019  
-- https://docs.microsoft.com/en-us/visualstudio/test/customizing-code-coverage-analysis?view=vs-2019 
+- https://docs.microsoft.com/en-us/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2022  
+- https://docs.microsoft.com/en-us/visualstudio/test/customizing-code-coverage-analysis?view=vs-2022 
 
 Enjoy!
 
@@ -33,6 +33,8 @@ More information on [NUnit parallel execution](https://github.com/nunit/docs/wik
 
 ### Templates
 There are 3 templates included, one complete which includes code coverage and parallel run, one with only code coverage, and one with only parallel run.  The latter can also be used as the most simple runsettings template.
+
+To enable automatic running of the runsettings file, rename the one you choose to **.runsettings**. 
 
 For more information see this blog post: [How to exclude code from code coverage in Visual Studio](http://hermit.no/how-to-exclude-code-from-code-coverage-in-visual-studio-unit-testing-using-runsettings/) 
 

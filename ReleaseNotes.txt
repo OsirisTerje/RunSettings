@@ -1,6 +1,10 @@
-﻿Note:  VS2012, VS2013, VS2015 and VS2017/19 have separate downloads, see links on each one.
-5.10
-    Adding NUnit IncludeStackTraceForSuites for version 4 of NUnit3TestAdapter
+﻿Note:  VS2012, VS2013, VS2015 and VS2017/19/22 have separate downloads, see links on each one.
+
+6.0.0
+    Support for VS 2022
+
+5.9.1
+    Hotfix removing the DesignMode.  It is an automatically set property from the IDE, and should not be manually edited.
 
 5.9
     Adding NUnit UseTestNameInConsoleOutput for version 4 of NUnit3TestAdapter

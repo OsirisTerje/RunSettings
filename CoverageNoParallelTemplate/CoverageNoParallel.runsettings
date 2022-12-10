@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- File name extension must be .runsettings -->
-<!-- For more information, see https://docs.microsoft.com/en-us/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019  -->
+<!-- For more information, see https://docs.microsoft.com/en-us/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2022  -->
 
 <RunSettings>
     <RunConfiguration>
@@ -31,14 +31,12 @@
         <!-- STA | MTA  default is STA for .NET Full and MTA for .NET Core-->
         <!--<ExecutionThreadApartmentState>STA</ExecutionThreadApartmentState>-->
 
-        <!-- 2. Hints to adapters to behave in a specific way -->
-        <DesignMode>false</DesignMode>
         <!-- Disables in-assembly parallel execution, applies to both MSTest and NUnit -->
         <DisableParallelization>false</DisableParallelization>
         <DisableAppDomain>false</DisableAppDomain>
         <CollectSourceInformation>true</CollectSourceInformation>
 
-        <!-- 3. Runner related configuration -->
+        <!-- Runner related configuration -->
         <BatchSize>10</BatchSize>
 
     </RunConfiguration>
@@ -170,7 +168,7 @@ Included items must then not match any entries in the exclude list to remain inc
   </TestRunParameters>
   -->
 
-    <!--  Section for loggers,  see https://docs.microsoft.com/en-us/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019#loggerrunsettings-element 
+    <!--  Section for loggers,  see https://docs.microsoft.com/en-us/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2022#loggerrunsettings-element 
   <LoggerRunSettings>
       <Loggers>
         <Logger friendlyName="console" enabled="True">
@@ -249,6 +247,9 @@ Included items must then not match any entries in the exclude list to remain inc
         <DiscoveryMethod>Current</DiscoveryMethod>
         <!--Legacy or Current-->
         <AssemblySelectLimit>2000</AssemblySelectLimit>
+        <NewOutputXmlFileForEachRun>false</NewOutputXmlFileForEachRun>
         <IncludeStackTraceForSuites>true</IncludeStackTraceForSuites>
+        <ExplicitMode>Strict</ExplicitMode>
+        <SkipExecutionWhenNoTests>false</SkipExecutionWhenNoTests>
     </NUnit>
 </RunSettings>

@@ -236,7 +236,7 @@ Included items must then not match any entries in the exclude list to remain inc
         <!--<TestOutputXml>TestOutputXml</TestOutputXml>-->
         <!--<Where></Where>-->
         <!-- NUnit filter expression, see https://docs.nunit.org/articles/nunit/running-tests/Test-Selection-Language.html  -->
-        <ConsoleOut>1</ConsoleOut>
+        <ConsoleOut>2</ConsoleOut>
         <UseTestNameInConsoleOutput>true</UseTestNameInConsoleOutput>
         <StopOnError>false</StopOnError>
         <SkipNonTestAssemblies>false</SkipNonTestAssemblies>

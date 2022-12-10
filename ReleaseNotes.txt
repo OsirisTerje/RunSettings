@@ -1,4 +1,6 @@
 ﻿Note:  VS2012, VS2013, VS2015 and VS2017/19/22 have separate downloads, see links on each one.
+6.1.0
+    Updates on Consoleout, default changed to 2
 
 6.0.0
     Support for VS 2022

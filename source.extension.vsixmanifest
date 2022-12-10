@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="Runsettings..e82ac86a-72fc-486f-9840-960bae8f3eda" Version="6.0.0" Language="en-US" Publisher="Terje Sandstrom" />
+        <Identity Id="Runsettings..e82ac86a-72fc-486f-9840-960bae8f3eda" Version="6.1.0" Language="en-US" Publisher="Terje Sandstrom" />
         <DisplayName>Runsettings</DisplayName>
         <Description xml:space="preserve">A set of runsettings item templates for Visual Studio 2022, 2019 and 2017   Right click the solution, choose Add/New Item and choose one of the Runsettings under General, and the runsettings file is added as a solution item, and opened as XML in your editor.  See https://docs.microsoft.com/en-us/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file, http://msdn.microsoft.com/en-us/library/vstudio/jj159530.aspx and https://msdn.microsoft.com/en-gb/library/jj635153.aspx  for information on how to customize the runsettings. </Description>
         <MoreInfo>https://github.com/OsirisTerje/RunSettings/blob/master/README.md</MoreInfo>
@@ -12,12 +12,12 @@
         <Tags>test runsettings codecoverage nunit mstest unittest</Tags>
     </Metadata>
     <Installation>
-      <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0,17.0)">
-        <ProductArchitecture>x86</ProductArchitecture>
-      </InstallationTarget>
-      <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0,18.0)">
-        <ProductArchitecture>amd64</ProductArchitecture>
-      </InstallationTarget>
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0,17.0)">
+            <ProductArchitecture>x86</ProductArchitecture>
+        </InstallationTarget>
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0,18.0)">
+            <ProductArchitecture>amd64</ProductArchitecture>
+        </InstallationTarget>
     </Installation>
     <Prerequisites>
         <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0,)" DisplayName="Microsoft.VisualStudio.Component.CoreEditor" />

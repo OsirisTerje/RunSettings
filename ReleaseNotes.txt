@@ -1,4 +1,7 @@
 ﻿Note:  VS2012, VS2013, VS2015 and VS2017/19 have separate downloads, see links on each one.
+5.10
+    Adding NUnit IncludeStackTraceForSuites for version 4 of NUnit3TestAdapter
+
 5.9
     Adding NUnit UseTestNameInConsoleOutput for version 4 of NUnit3TestAdapter
     

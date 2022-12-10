@@ -135,6 +135,7 @@
         <DiscoveryMethod>Current</DiscoveryMethod>
         <!--Legacy or Current-->
         <AssemblySelectLimit>2000</AssemblySelectLimit>
+        <IncludeStackTraceForSuites>true</IncludeStackTraceForSuites>
     </NUnit>
 </RunSettings>
 

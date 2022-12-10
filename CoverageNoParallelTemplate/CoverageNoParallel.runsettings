@@ -249,5 +249,6 @@ Included items must then not match any entries in the exclude list to remain inc
         <DiscoveryMethod>Current</DiscoveryMethod>
         <!--Legacy or Current-->
         <AssemblySelectLimit>2000</AssemblySelectLimit>
+        <IncludeStackTraceForSuites>true</IncludeStackTraceForSuites>
     </NUnit>
 </RunSettings>
